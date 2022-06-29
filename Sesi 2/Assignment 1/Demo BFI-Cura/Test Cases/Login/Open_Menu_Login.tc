@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Melakukan Test Login</description>
+   <name>Open_Menu_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b9444549-4dda-4090-9617-846e729f9f36</testCaseGuid>
+</TestCaseEntity>
