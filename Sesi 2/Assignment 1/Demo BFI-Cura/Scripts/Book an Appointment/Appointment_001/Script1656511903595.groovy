@@ -17,21 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login/Login_001'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.comment('After Succeed to Login Form')
+WebUI.comment('Success Login')
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Username'), GlobalVariable.username)
+WebUI.selectOptionByValue(findTestObject('Spy Mode/Page Book Appointment/select_Healthcare Center'), 'Seoul CURA Healthcare Center', 
+    true)
 
-WebUI.comment('Using encripted text on scenario "Set Text"')
+WebUI.click(findTestObject('Spy Mode/Page Book Appointment/checkBox_Apply for hospital readmission'))
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Password'), GlobalVariable.password)
+WebUI.click(findTestObject('Spy Mode/Page Book Appointment/input_None_programs'))
 
-WebUI.click(findTestObject('Spy Mode/Page Login/button_Login'))
+WebUI.setText(findTestObject('Spy Mode/Page Book Appointment/inputText_Visit Date'), '02/07/2022')
 
-WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 5)
+WebUI.setText(findTestObject('Spy Mode/Page Book Appointment/textarea_Comment'), 'I need Paracetamol')
 
-WebUI.comment('Success if There is an alert')
+WebUI.click(findTestObject('Spy Mode/Page Book Appointment/button_Book Appointment'))
 
-WebUI.closeBrowser()
+WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Appointment Confirmation/headerPage_Confirmation'), 3)
+
+WebUI.comment('Success if Directed to Appointment Confirmation Page')
 

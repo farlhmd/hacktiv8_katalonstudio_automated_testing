@@ -17,15 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login/Open_Menu_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Username'), 'John Doe')
+WebUI.comment('After Succeed to Login Form')
 
-WebUI.setEncryptedText(findTestObject('Spy Mode/Page Login/input_Password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
+WebUI.comment('Using Valid Username and Password')
+
+WebUI.setText(findTestObject('Spy Mode/Page Login/input_Username'), GlobalVariable.username)
+
+WebUI.setEncryptedText(findTestObject('Spy Mode/Page Login/input_Password'), GlobalVariable.password)
 
 WebUI.click(findTestObject('Spy Mode/Page Login/button_Login'))
 
-WebUI.verifyElementNotPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 5)
+WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Book Appointment/headerPage_Make Appointment'), 5)
 
-WebUI.closeBrowser()
+WebUI.comment('Success if Directed to Book Appointment Page')
 

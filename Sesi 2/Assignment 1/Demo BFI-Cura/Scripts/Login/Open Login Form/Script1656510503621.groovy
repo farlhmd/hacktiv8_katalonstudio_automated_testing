@@ -17,21 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('')
 
-WebUI.comment('After Succeed to Login Form')
+WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Username'), GlobalVariable.username)
+WebUI.click(findTestObject('Spy Mode/Page Main/btn_Toggle Right Side'))
 
-WebUI.comment('Using encripted text on scenario "Set Text"')
+WebUI.click(findTestObject('Spy Mode/Page Main/side_btn_Login'))
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Password'), GlobalVariable.password)
+WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/headerPage_Login'), 3)
 
-WebUI.click(findTestObject('Spy Mode/Page Login/button_Login'))
-
-WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 5)
-
-WebUI.comment('Success if There is an alert')
-
-WebUI.closeBrowser()
+WebUI.comment('Success if there is a Login Form')
 

@@ -17,21 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('https://www.google.com/')
 
-WebUI.comment('After Succeed to Login Form')
+WebUI.waitForElementPresent(findTestObject('Page_Google/input_Search'), 0)
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Username'), GlobalVariable.username)
+WebUI.setText(findTestObject('input_search'), '2+2=')
 
-WebUI.comment('Using encripted text on scenario "Set Text"')
+WebUI.click(findTestObject('Page_Google/btn_Penelusuran'))
 
-WebUI.setText(findTestObject('Spy Mode/Page Login/input_Password'), GlobalVariable.password)
+WebUI.comment('Check if value is equal to 4')
 
-WebUI.click(findTestObject('Spy Mode/Page Login/button_Login'))
+WebUI.verifyElementText(findTestObject('Page_22 - Penelusuran Google/txt_resultCalculator'), '5', FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 5)
-
-WebUI.comment('Success if There is an alert')
+WebUI.delay(5)
 
 WebUI.closeBrowser()
 

@@ -17,11 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Appointment Confirmation/Confirmation_001'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+WebUI.click(findTestObject('Spy Mode/Page Appointment Confirmation/btn_Go to Homepage'))
 
 WebUI.click(findTestObject('Spy Mode/Page Main/btn_Toggle Right Side'))
 
-WebUI.click(findTestObject('Spy Mode/Page Main/side_btn_Login'))
+WebUI.click(findTestObject('Spy Mode/Page Main/side_btn_Logout'))
+
+WebUI.click(findTestObject('Spy Mode/Page Main/btn_Toggle Right Side'))
+
+WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Main/side_btn_Login'), 5)
+
+WebUI.comment('Success if there is Login button on side bar')
+
+WebUI.closeBrowser()
 
