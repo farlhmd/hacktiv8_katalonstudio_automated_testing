@@ -1,4 +1,4 @@
-For a better experience on reading this, open from: [Github](https://github.com/farlhmd/hacktiv8_katalonstudio_automated_testing/blob/main/README.md)
+For a better experience on reading this, open from: [Github](https://github.com/farlhmd/hacktiv8_katalonstudio_automated_testing/tree/main/Sesi%202/Assignment%201/Demo%20BFI-Cura)
 
 
 ## Running Automation Test with Katalon Studio
