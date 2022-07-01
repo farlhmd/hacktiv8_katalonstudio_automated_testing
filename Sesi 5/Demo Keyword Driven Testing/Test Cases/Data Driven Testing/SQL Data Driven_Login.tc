@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Login with valid Username AND Password</description>
+   <name>SQL Data Driven_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d7f9221f-514b-444d-a4a8-b84c7f241d3b</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>5cae4c85-fb4a-468b-b7a2-5a7918b93f1f</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Database MySQL/Test Data DB</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>5cae4c85-fb4a-468b-b7a2-5a7918b93f1f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>username</value>
+      <variableId>9e620443-c78c-424c-a5f4-67409c4c6a10</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>5cae4c85-fb4a-468b-b7a2-5a7918b93f1f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>password</value>
+      <variableId>2b0b71da-ae34-4253-b2e0-cd586486dbe9</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'John Doe'</defaultValue>
+      <description></description>
+      <id>9e620443-c78c-424c-a5f4-67409c4c6a10</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'ThisIsNotAPassword'</defaultValue>
+      <description></description>
+      <id>2b0b71da-ae34-4253-b2e0-cd586486dbe9</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

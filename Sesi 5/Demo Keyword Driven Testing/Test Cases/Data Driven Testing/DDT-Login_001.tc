@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Login with valid Username AND Password</description>
+   <name>DDT-Login_001</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ae9f8c37-4ddf-476a-ab4e-1a0a29ecd9a3</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c9656820-f968-4452-8f12-637f86fc7372</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ec9cee5c-babc-425c-a8a1-e2c4b2a5029d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'John Doe'</defaultValue>
+      <description></description>
+      <id>c9656820-f968-4452-8f12-637f86fc7372</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'ThisIsNotAPassword'</defaultValue>
+      <description></description>
+      <id>ec9cee5c-babc-425c-a8a1-e2c4b2a5029d</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

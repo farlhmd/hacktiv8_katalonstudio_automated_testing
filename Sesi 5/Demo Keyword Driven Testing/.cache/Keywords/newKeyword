@@ -1,0 +1,29 @@
+{
+  "keywordFileContentHash": "2562F8C9FE6D7F97B3C587C50C923990",
+  "keywordClasses": [
+    {
+      "name": "newKeyword",
+      "keywordMethods": [
+        {
+          "name": "myCustomPrint",
+          "parameters": [
+            {
+              "name": "msg",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "javadocParsed": false
+}
