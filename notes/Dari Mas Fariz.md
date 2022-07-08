@@ -30,7 +30,7 @@ https://docs.katalon.com/docs/katalon-studio-enterprise/integration/jira-integra
 https://docs.katalon.com/docs/katalon-studio-enterprise/create-tests-and-projects/manage-projects/statements/decision-making-statements \
     inget: klo misal mau bikin verifikasi dengan suatu keyword WebUI, maka jgn lupa kasih "failure handling"nya juga (optional, atau continue on failure) di dalam if-elsenya, sehingga contohnya seperti ini:
 
-      if (WebUI.verifyElementPresent(findTestObject('Appointment Page/h2_Make Appointment'), 3, FailureHandling.OPTIONAL) == true) {
+        if (WebUI.verifyElementPresent(findTestObject('Appointment Page/h2_Make Appointment'), 3, FailureHandling.OPTIONAL) == true) {
                 
           println('ini berhasil gaess')
 
