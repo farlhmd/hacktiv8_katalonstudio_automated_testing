@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Login/Open Login Form'), [:], FailureHandling.OPTIONAL)
 
 WebUI.comment('After Succeed to Login Form')
 
@@ -29,9 +29,15 @@ WebUI.setText(findTestObject('Spy Mode/Page Login/input_Password'), GlobalVariab
 
 WebUI.click(findTestObject('Spy Mode/Page Login/button_Login'))
 
-WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 5)
-
 WebUI.comment('Success if There is an alert')
+
+if (WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 3, FailureHandling.OPTIONAL) == 
+true) {
+    println('Ini berhasil ya ges ya')
+	WebUI.verifyElementPresent(findTestObject('Spy Mode/Page Login/txt_Invalid Username or Password'), 3, FailureHandling.OPTIONAL)
+} else {
+    println('Ini gagal')
+}
 
 WebUI.closeBrowser()
 
